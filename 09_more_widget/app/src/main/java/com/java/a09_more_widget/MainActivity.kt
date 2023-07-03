@@ -2,20 +2,22 @@ package com.java.a09_more_widget
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.CheckBox
+import android.widget.ProgressBar
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Spinner
-import android.widget.SpinnerAdapter
 import android.widget.TimePicker
 import android.widget.Toast
-import androidx.core.view.get
 
-class MainActivity : AppCompatActivity() {
+
+
+class MainActivity : AppCompatActivity(), TimePickerListener  {
 
     private lateinit var box1 : CheckBox
     private lateinit var box2 : CheckBox
@@ -23,7 +25,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var radioGroup: RadioGroup
     private lateinit var spinner : Spinner
     private lateinit var timePicker: TimePicker
-
+    private lateinit var btnTimePicker : Button
+    private lateinit var btnDatePicker : Button
+    private lateinit var progressBar : ProgressBar
 
     //Initialize
     private fun initializeWidget(){
@@ -31,8 +35,11 @@ class MainActivity : AppCompatActivity() {
         box2 = findViewById(R.id.checkbox_box2)
         btn = findViewById(R.id.btnGetValue)
         radioGroup = findViewById(R.id.rgroupDelivery)
-        timePicker = findViewById(R.id.time_picker)
-        timePicker.is24HourView
+        btnTimePicker = findViewById(R.id.btnPickTime)
+        btnDatePicker = findViewById(R.id.btnPickDate)
+        progressBar = findViewById(R.id.progressBar)
+
+        //initializeTimePicker()
         initializeSpinner()
     }
 
@@ -44,6 +51,12 @@ class MainActivity : AppCompatActivity() {
         ad.setDropDownViewResource(com.google.android.material.R.layout.support_simple_spinner_dropdown_item)
         spinner.setAdapter(ad)
     }
+
+//    private fun initializeTimePicker(){
+//        timePicker = findViewById(R.id.time_picker)
+//        timePicker.is24HourView
+//    }
+
 
 
     //ACTION
@@ -94,17 +107,51 @@ class MainActivity : AppCompatActivity() {
 //        }
     }
 
+    private fun actionFragmentTimePicker(){
+        btnTimePicker.setOnClickListener {
+            //TimeFragment, hati-hati dengan type object.
+            var timePickerFrag : TimePickerFragment =  TimePickerFragment()
+            timePickerFrag.show(
+                supportFragmentManager,
+                "Pick Time Now"
+            )
+            timePickerFrag.setTimePickerListener(this@MainActivity)
+        }
+    }
+
+    private fun actionFragmentDatePicker(){
+        btnDatePicker.setOnClickListener {
+            //TimeFragment, hati-hati dengan type object.
+            var timePickerFrag : DatePickerFragment =  DatePickerFragment()
+            timePickerFrag.show(
+                supportFragmentManager,
+                "Pick Time Now"
+            )
+        }
+    }
+
     //OnCreate
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         initializeWidget()
+        progressBar.setProgress(10)
         btn.setOnClickListener {
             actionCheckedBox()
             actionRadionButton()
             actionSpinner()
-            actionTimePicker()
+//            actionTimePicker()
+            progressBar.incrementProgressBy(10)
         }
 
+        actionFragmentTimePicker()
+        actionFragmentDatePicker()
+
+    }
+
+    override fun onTimeSelected(hour: Int, minute: Int) {
+            var message = "${hour} : ${minute}"
+            Log.d("hasil","${hour} : ${minute}")
+            Toast.makeText(this,message,Toast.LENGTH_SHORT).show()
     }
 }
