@@ -1,7 +1,13 @@
 <resources>
 	<string name="app_name">listviewadapter</string>
-	<string name="navigate_custom_list_view">Navigate Custom List View</string>
+	<string name="navigate_custom_list_view">Navigate Custom List
+		View
+	</string>
 	<string name="navigate_list_view">Navigate List View</string>
 	<string name="item_image">item image\n</string>
 	<string name="details">Details</string>
+	<string name="planets">Planets</string>
+	<string name="grid_view">Grid View</string>
+	<string name="default_string">Text 1</string>
+	<string name="volume_calculator">Volume Calculator</string>
 </resources>

@@ -6,6 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
+
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -14,8 +15,9 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:id="@+id/btnNavigateListView"/>
-
+            android:id="@+id/btnNavigateListView"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintVertical_bias="0.203"/>
     <Button
             android:id="@+id/btnNavigateCustomListView"
             android:layout_width="wrap_content"
@@ -30,11 +32,21 @@
             android:id="@+id/btnNavigateToPlanet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/navigate_custom_list_view"
+            android:text="@string/planets"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="64dp"
             app:layout_constraintTop_toBottomOf="@+id/btnNavigateCustomListView"/>
+
+    <Button
+            android:id="@+id/btnNavigateToGrid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/grid_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="64dp"
+            app:layout_constraintTop_toBottomOf="@+id/btnNavigateToPlanet"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,7 @@
 package group.learn.listviewadapter.data;
 
 import com.github.javafaker.Faker;
+import group.learn.listviewadapter.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,17 +13,22 @@ public class DummyData {
     private static final int SMALL_AMOUNT = 100;
     private static final int MEDIUM_AMOUNT = 200;
     private static final Faker faker = new Faker();
-    protected static final List<String> NAMES = getDummyNames();
+    public static final List<String> NAMES = getDummyNames();
 
-    protected static final List<Music> MUSIC_LIST = generateMusicList();
+    public static final List<Planet> PLANETS = generatePlanets();
+
+    public static final List<Shape> SHAPES = generateShapes();
+
+    public static final List<Music> MUSIC_LIST = generateMusicList();
 
     private static List<String> getDummyNames() {
     List<String> names = new ArrayList<>();
         for (int i = 0; i < DummyData.SMALL_AMOUNT; i++)
             names.add(faker.name().name());
-
        return names;
     }
+
+
 
 
 
@@ -37,6 +43,29 @@ public class DummyData {
             musics.add(music);
         }
         return musics;
+    }
+
+    private static List<Planet> generatePlanets(){
+        List<Planet> planets = new ArrayList<>();
+        planets.add(new Planet("Earth", "1 Moon", R.drawable.earth));
+        planets.add(new Planet("Mercury", "0 Moon", R.drawable.mercury));
+        planets.add(new Planet("Venus", "0 Moon", R.drawable.venus));
+        planets.add(new Planet("Mars"," 2 Moon", R.drawable.mars));
+        planets.add(new Planet("Jupiter", "79", R.drawable.jupiter));
+        planets.add(new Planet("Saturn", "83", R.drawable.saturn));
+        planets.add(new Planet("Uranus", "27", R.drawable.uranus));
+        planets.add(new Planet("Neptune", "14", R.drawable.neptune));
+        return planets;
+    }
+
+
+    private static List<Shape> generateShapes(){
+        List<Shape> shapes = new ArrayList<>();
+        shapes.add(Shape.builder().shapeImg(R.drawable.cube).shapeName("CUBE").build());
+        shapes.add(Shape.builder().shapeImg(R.drawable.cylinder).shapeName("CYLINDER").build());
+        shapes.add(Shape.builder().shapeImg(R.drawable.prism).shapeName("PRISM").build());
+        shapes.add(Shape.builder().shapeImg(R.drawable.sphere).shapeName("SPHERE").build());
+        return shapes;
     }
 
 }
