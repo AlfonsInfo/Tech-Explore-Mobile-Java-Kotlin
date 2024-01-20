@@ -19,6 +19,8 @@ public class DummyData {
 
     public static final List<Shape> SHAPES = generateShapes();
 
+    public static final List<Item> ITEMS =  generateItems();
+
     public static final List<Music> MUSIC_LIST = generateMusicList();
 
     private static List<String> getDummyNames() {
@@ -66,6 +68,17 @@ public class DummyData {
         shapes.add(Shape.builder().shapeImg(R.drawable.prism).shapeName("PRISM").build());
         shapes.add(Shape.builder().shapeImg(R.drawable.sphere).shapeName("SPHERE").build());
         return shapes;
+    }
+
+    private static List<Item> generateItems(){
+        List<Item> items = new ArrayList<>();
+        items.add(Item.builder().itemName("Fruits").itemDesc("Fresh Fruits from the Garden").itemImg(R.drawable.fruit).build());
+        items.add(Item.builder().itemName("Vegetables").itemDesc("Delicious Vegetables").itemImg(R.drawable.vegitables).build());
+        items.add(Item.builder().itemName("Bakery").itemDesc("Bread, Wheat and Beans").itemImg(R.drawable.bread).build());
+        items.add(Item.builder().itemName("Beverage").itemDesc("Juice, Tea, Coffee, and Soda").itemImg(R.drawable.bread).build());
+        items.add(Item.builder().itemName("Milk").itemDesc("Milk , Shakes, and Yogurt").itemImg(R.drawable.milk).build());
+        items.add(Item.builder().itemName("Snacks").itemDesc("Popcorn, Donut, Drinks").itemImg(R.drawable.bread).build());
+        return items;
     }
 
 }

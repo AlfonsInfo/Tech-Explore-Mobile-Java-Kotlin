@@ -34,10 +34,6 @@ Xapp/src/main/java/group/learn/listviewadapter/views/customadapter/CustomAdapter
 Rapp/src/main/java/group/learn/listviewadapter/views/planetapps/PlanetActivity.java,3\6\368891fb241ebc52527adc1baae4870a9c059f84
 n
 >app/src/main/java/group/learn/listviewadapter/data/Planet.java,1\f\1f7b30a4f6685925a8aaaace1a584deb93df1a50
-Å
-Qapp/src/main/java/group/learn/listviewadapter/views/planetapps/CustomAdapter.java,d\5\d553a935c1d4abac6b19f241b8afc21888ae88da
-Ä
-Papp/src/main/java/group/learn/listviewadapter/views/planetapps/DetailPlanet.java,9\2\92948c968dd8f14638e661aa37bfe5b235e90003
 á
 Wapp/src/main/java/group/learn/listviewadapter/views/planetapps/DetailPlanetActivty.java,5\b\5b8b9afaddba3e7e9be6afd925340b25a0835e6e
 Å
@@ -48,3 +44,11 @@ m
 =app/src/main/java/group/learn/listviewadapter/data/Shape.java,4\e\4e33bae74c31e28462d074fa590bfbbd4f1f5b1c
 }
 Mapp/src/main/java/group/learn/listviewadapter/views/gridview/GridAdapter.java,6\e\6e2730944681e0237c2ed076cd6c428216344965
+Ñ
+Tapp/src/main/java/group/learn/listviewadapter/views/recycleview/RecycleActivity.java,e\9\e9f14697a66295966661b80a83d59c2aaab2951e
+É
+Sapp/src/main/java/group/learn/listviewadapter/views/recycleview/RecycleAdapter.java,4\9\49fb4271a8ed8f5effae3c65a9ef6a5ce25eff71
+l
+<app/src/main/java/group/learn/listviewadapter/data/Item.java,2\9\29f0be32485adccc8f4ea5fe71e1769a8a9923d2
+Ü
+Vapp/src/main/java/group/learn/listviewadapter/views/recycleview/ItemClickListener.java,0\1\01baef984fd887cc86a2db866aa14f1da5b4313d

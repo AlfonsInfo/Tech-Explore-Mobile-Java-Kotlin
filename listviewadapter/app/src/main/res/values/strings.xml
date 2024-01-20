@@ -10,4 +10,8 @@
 	<string name="grid_view">Grid View</string>
 	<string name="default_string">Text 1</string>
 	<string name="volume_calculator">Volume Calculator</string>
+	<string name="recycle_activity">Recycle Activity</string>
+	<string name="your_description_here">Your description here
+	</string>
+	<string name="title">title</string>
 </resources>

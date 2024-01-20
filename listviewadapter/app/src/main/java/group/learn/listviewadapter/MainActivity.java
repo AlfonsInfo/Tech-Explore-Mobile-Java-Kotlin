@@ -8,6 +8,7 @@ import group.learn.listviewadapter.views.basicadapter.BuiltInAdapterView;
 import group.learn.listviewadapter.views.customadapter.CustomAdapterView;
 import group.learn.listviewadapter.views.gridview.GridActivity;
 import group.learn.listviewadapter.views.planetapps.PlanetActivity;
+import group.learn.listviewadapter.views.recycleview.RecycleActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,14 +22,16 @@ public class MainActivity extends AppCompatActivity {
         final Button buttonNavigateCustomListView = findViewById(R.id.btnNavigateCustomListView);
         final Button buttonNavigateToPlanetView = findViewById(R.id.btnNavigateToPlanet);
         final Button buttonNavigateToGridViews = findViewById(R.id.btnNavigateToGrid);
+        final Button buttonNavigateToRecycleView = findViewById(R.id.btnNavigateToRecycle);
 
-        navigate(buttonNavigateListView, new Intent(this, BuiltInAdapterView.class));
-        navigate(buttonNavigateCustomListView, new Intent(this, CustomAdapterView.class));
-        navigate(buttonNavigateToPlanetView, new Intent(this, PlanetActivity.class));
-        navigate(buttonNavigateToGridViews, new Intent(this, GridActivity.class));
+        doNavigate(buttonNavigateListView, new Intent(this, BuiltInAdapterView.class));
+        doNavigate(buttonNavigateCustomListView, new Intent(this, CustomAdapterView.class));
+        doNavigate(buttonNavigateToPlanetView, new Intent(this, PlanetActivity.class));
+        doNavigate(buttonNavigateToGridViews, new Intent(this, GridActivity.class));
+        doNavigate(buttonNavigateToRecycleView, new Intent(this, RecycleActivity.class));
     }
 
-    private void navigate(Button buttonNavigateListView, Intent intentToTargetActivity) {
+    private void doNavigate(Button buttonNavigateListView, Intent intentToTargetActivity) {
         buttonNavigateListView.setOnClickListener(v -> startActivity(intentToTargetActivity));
     }
 }
