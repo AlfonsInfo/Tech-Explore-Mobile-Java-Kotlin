@@ -17,7 +17,7 @@
             app:layout_constraintTop_toTopOf="parent"
             android:id="@+id/btnNavigateListView"
             app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintVertical_bias="0.203"/>
+            app:layout_constraintVertical_bias="0.023"/>
     <Button
             android:id="@+id/btnNavigateCustomListView"
             android:layout_width="wrap_content"
@@ -59,5 +59,14 @@
             android:layout_marginTop="64dp"
             app:layout_constraintTop_toBottomOf="@+id/btnNavigateToGrid"/>
 
+    <Button
+            android:id="@+id/btnNavigateToMusicPlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/music_player"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="64dp"
+            app:layout_constraintTop_toBottomOf="@+id/btnNavigateToRecycle"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
