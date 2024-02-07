@@ -12,11 +12,16 @@
 			android:supportsRtl="true"
 			android:theme="@style/Theme.Listviewadapter"
 			tools:targetApi="31">
+		<activity
+				android:name=".components.activity.FragmentAppActivity"
+				android:exported="false"/>
+
 		<service
 				android:name=".components.service.MusicService"
 				android:enabled="true"
 				android:exported="true">
 		</service>
+
 		<receiver
 				android:name=".components.broadcast.AirplaneModeReceiver"
 				android:exported="true">

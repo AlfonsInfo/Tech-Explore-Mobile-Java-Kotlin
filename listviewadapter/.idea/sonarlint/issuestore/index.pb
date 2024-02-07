@@ -52,3 +52,15 @@ l
 <app/src/main/java/group/learn/listviewadapter/data/Item.java,2\9\29f0be32485adccc8f4ea5fe71e1769a8a9923d2
 †
 Vapp/src/main/java/group/learn/listviewadapter/views/recycleview/ItemClickListener.java,0\1\01baef984fd887cc86a2db866aa14f1da5b4313d
+‚
+Rapp/src/main/java/group/learn/listviewadapter/components/service/MusicService.java,6\4\6486bb077d7bb1b21dadd5ca5bc618ca6f62b361
+Œ
+\app/src/main/java/group/learn/listviewadapter/components/broadcast/AirplaneModeReceiver.java,2\9\2911d191c46262212eb232b11cb3b7215ff7f54d
+
+Qapp/src/main/java/group/learn/listviewadapter/components/MusicPlayerActivity.java,8\b\8bb6e40f57b52a8cde585b5a774a0fc549072eb1
+‹
+[app/src/main/java/group/learn/listviewadapter/components/broadcast/SpeakerDownReceiver.java,7\d\7d391be6d1ff679da74e824f5db984ceac669349
+„
+Tapp/src/main/java/group/learn/listviewadapter/components/fragment/FirstFragment.java,0\5\05bc71f5d605b0b4d10105ac181320daaaf24151
+Š
+Zapp/src/main/java/group/learn/listviewadapter/components/activity/FragmentAppActivity.java,7\b\7b6eba5e5a36d2cb96e7eb4c9bfd79730f883140
